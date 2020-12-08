@@ -2,7 +2,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-//import logo from "./logo.svg";
 import "./App.css";
 
 //components
@@ -10,6 +9,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home.jsx";
 import Login from "./pages/login.jsx";
 import Register from "./pages/register.jsx";
+import Form from "./components/form";
 import NotFound from "./pages/notFound";
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/Register" component={Register} />
           <Route path="/home" component={Home} />
+          <Route path="/Form" component={Form} />
           <Route path="/not-found" component={NotFound} />
           <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />

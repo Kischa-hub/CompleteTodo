@@ -61,6 +61,7 @@ function Home(props) {
                     className="nav-link"
                     href="https://www.linkedin.com/in/km-elhosseny/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     LinkedIn
                   </a>
@@ -70,6 +71,7 @@ function Home(props) {
                     className="nav-link"
                     href="https://github.com/Kischa-hub"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Github
                   </a>
