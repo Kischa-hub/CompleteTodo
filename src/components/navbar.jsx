@@ -32,7 +32,7 @@ function navbar(props) {
             <NavLink className="nav-link active" to="/home">
               Home <span className="sr-only">(current)</span>
             </NavLink>
-            <NavLink className="nav-link" to="/form">
+            <NavLink className="nav-link" to="/todo">
               Todo List
             </NavLink>
             <NavLink className="nav-link" to="/login">

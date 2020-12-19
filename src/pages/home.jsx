@@ -35,7 +35,7 @@ function Home(props) {
             <Card.Body>
               <ol>
                 <li>ReactJs</li>
-                <li>Bootstrap & React-Bootstrap</li>
+                <li>Bootstrap & React-Bootstrap & Fontawsome</li>
                 <li>react-router-dom</li>
                 <li>Hooks</li>
                 <li>json-server</li>

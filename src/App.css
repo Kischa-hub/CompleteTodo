@@ -1,4 +1,51 @@
- {
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,9 +124,7 @@ form button:hover {
 .complete-btn {
   background: rgb(11, 212, 162);
 }
-.todo-item {
-  padding: 0rem 0.5rem;
-}
+
 
 .fa-trash,
 .fa-check {
@@ -91,12 +136,9 @@ form button:hover {
   opacity: 0;
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
 
-/*CUSTOM SELECTOR */
+
+//CUSTOM SELECTOR 
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -108,7 +150,7 @@ select {
   background-image: none;
 }
 
-/* Custom Select */
+// Custom Select 
 .select {
   margin: 1rem;
   position: relative;
@@ -120,7 +162,7 @@ select {
   cursor: pointer;
   width: 12rem;
 }
-/* Arrow */
+// Arrow 
 .select::after {
   content: "\25BC";
   position: absolute;
