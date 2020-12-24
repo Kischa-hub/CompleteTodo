@@ -18,15 +18,15 @@ function Todo({ text, todo, todos, setTodos }) {
   };
 
   return (
-    <div>
+    <div className="todo">
       <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
         {text}
       </li>
-      <button onClick={completeTodoHandler}>
-        <FontAwesomeIcon icon={faCheckCircle} />
+      <button className="complete-btn" onClick={completeTodoHandler}>
+        <FontAwesomeIcon className="fas fa-check" icon={faCheckCircle} />
       </button>
-      <button onClick={deleteTodoHandler}>
-        <FontAwesomeIcon icon={faTrash} />
+      <button className="trash-btn" onClick={deleteTodoHandler}>
+        <FontAwesomeIcon className="fas fa-trash" icon={faTrash} />
       </button>
     </div>
   );

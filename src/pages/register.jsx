@@ -1,11 +1,21 @@
 import React from "react";
 
-function register(props) {
+import { useTranslation } from "react-i18next";
+
+function Register() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <div>
-      <h1>register</h1>
+      {<h1>{t("Welcome")}</h1>}
+      <button onClick={() => changeLanguage("de")}>de</button>
+      <button onClick={() => changeLanguage("en")}>en</button>
     </div>
   );
 }
 
-export default register;
+export default Register;

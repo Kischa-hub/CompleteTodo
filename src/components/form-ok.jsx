@@ -1,23 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
-  //Validation
-  // var schema = Joi.object().keys({
-  //   todotext: Joi.string().required(),
-  // });
-
-  // const {
-  //   user: { todotext },
-  //   errors,
-  //   changeHandler,
-  //   validateHandler,
-  // } = this.props;
-
   //event Handlers
   const inputTextHandler = (e) => {
-    setInputText(e.target.value);
+    if (inputText !== "") setInputText(e.target.value);
+    else return;
   };
 
   const submitTodoHandler = (e) => {
@@ -37,14 +26,7 @@ function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
   return (
     <div>
       <form>
-        <input
-          value={inputText}
-          type="text"
-          onChange={inputTextHandler}
-          placeholder="Add Todo ..."
-          name="todotext"
-          required=""
-        />
+        <input value={inputText} type="text" onChange={inputTextHandler} />
 
         <button type="submit" className="addBtn" onClick={submitTodoHandler}>
           <FontAwesomeIcon icon={faCalendarPlus} />
@@ -56,8 +38,8 @@ function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
             className="custom-select"
           >
             <option value="all">All</option>
-            <option value="complet">complet</option>
-            <option value="uncomplet">Uncomplet</option>
+            <option value="complet">completed</option>
+            <option value="uncomplet">Uncompleted</option>
           </select>
         </div>
       </form>

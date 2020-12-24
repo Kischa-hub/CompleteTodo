@@ -37,14 +37,220 @@
   }
 }
 
-.todo-item {
-  padding: 0rem 0.5rem;
+/*fORM */
+
+input {
+  margin: 0;
+  position: relative;
+  width: 80%;
+  height: 20px;
+  height: auto;
+  border-style: solid #61dafb;
+  border-radius: 0;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  position: relative;
+  width: 5%;
+
+  background: #d9d9d9;
+  color: #61dafb;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  width: 15%;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
+h1 {
+  text-align: center;
+  color: coral;
+}
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+  vertical-align: auto;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+.todo li {
+  flex: 1;
+}
+
+/*tODO*/
+
+.todo {
+  margin: 0.5rem;
+  padding: 10px;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  width: 75%;
+  text-align: center;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff4747;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 50px;
+}
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.eng-trans {
+  position: absolute;
+  top: 12px;
+  left: 800px;
+  color: #ff4747;
+  border: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.du-trans {
+  position: absolute;
+  top: 12px;
+  left: 850px;
+  color: #ff4747;
+  border: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
 /*{
   margin: 0;
   padding: 0;

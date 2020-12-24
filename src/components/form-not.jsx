@@ -1,32 +1,29 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
-  //Validation
-  // var schema = Joi.object().keys({
-  //   todotext: Joi.string().required(),
-  // });
-
-  // const {
-  //   user: { todotext },
-  //   errors,
-  //   changeHandler,
-  //   validateHandler,
-  // } = this.props;
+  //react-hook-form
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => {
+    console.log("kareem", data);
+  };
+  console.log(errors);
 
   //event Handlers
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
 
-  const submitTodoHandler = (e) => {
+  const submitTodoHandler = (e, data) => {
     e.preventDefault();
     setTodos([
       ...todos,
       { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
     setInputText("");
+    console.log("kareem", data);
   };
 
   const statusHandler = (e) => {
@@ -36,15 +33,16 @@ function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
 
   return (
     <div>
-      <form>
+      <form autoComplete="off" onSubmit={handleSubmit(submitTodoHandler)}>
         <input
-          value={inputText}
           type="text"
           onChange={inputTextHandler}
-          placeholder="Add Todo ..."
-          name="todotext"
-          required=""
+          placeholder="Add Todo"
+          name="todoText"
+          ref={register({ required: true })}
+          autoFocus
         />
+        {errors.todoText && <span>This field is required</span>}
 
         <button type="submit" className="addBtn" onClick={submitTodoHandler}>
           <FontAwesomeIcon icon={faCalendarPlus} />
@@ -56,8 +54,8 @@ function Form({ setInputText, setTodos, todos, inputText, setStatus }) {
             className="custom-select"
           >
             <option value="all">All</option>
-            <option value="complet">complet</option>
-            <option value="uncomplet">Uncomplet</option>
+            <option value="complet">completed</option>
+            <option value="uncomplet">Uncompleted</option>
           </select>
         </div>
       </form>

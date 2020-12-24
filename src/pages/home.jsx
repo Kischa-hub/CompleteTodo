@@ -42,6 +42,7 @@ function Home(props) {
                 <li>Axios</li>
                 <li>Sentry for Logging</li>
                 <li>Joi Validation</li>
+                <li>react-hook-form</li>
               </ol>
             </Card.Body>
           </Accordion.Collapse>
