@@ -5,7 +5,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 //components
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar.jsx";
 import Home from "./pages/home.jsx";
 import Login from "./pages/login.jsx";
 import Register from "./pages/register.jsx";
@@ -16,7 +16,6 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <main role="main" className="container">
         <Switch>
           <Route path="/login" component={Login} />

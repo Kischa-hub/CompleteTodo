@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./i18n";
@@ -13,9 +13,7 @@ import { faDivide } from "@fortawesome/free-solid-svg-icons";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Suspense fallback={<div>Loading....</div>}>
-      <App />
-    </Suspense>
+    <App />
   </BrowserRouter>,
   document.getElementById("root")
 );
