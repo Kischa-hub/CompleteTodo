@@ -1,14 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/imgs/logo.svg";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 function Navbar(props) {
-  const { t, i18n, ready } = useTranslation(null, { useSuspense: false });
+  // const { t, i18n, ready } = useTranslation(null, { useSuspense: false });
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // };
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,12 +47,12 @@ function Navbar(props) {
             <NavLink className="nav-link" to="/register">
               Register
             </NavLink>
-            <button className="eng-trans" onClick={changeLanguage("en")}>
+            {/* <button className="eng-trans" onClick={changeLanguage("en")}>
               En
             </button>
             <button className="du-trans" onClick={changeLanguage("de")}>
               De
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>
